@@ -7,6 +7,7 @@
   <properties>
   	<selenium.version>3.4.0</selenium.version>
   	<threads>2</threads>
+  	<browser>chrome</browser>
   </properties>
   <build>
   <plugins>
@@ -17,6 +18,10 @@
   <configuration>
   	<parallel>methods</parallel>
   	<threadCount>${threads}</threadCount>
+  	<systemProperties>
+  	<browser>${browser}
+  	</browser>
+  	</systemProperties>
   	<includes>
   	<include>**/*WD.java
   	</include>
@@ -44,6 +49,12 @@
     	<artifactId>selenium-remote-driver</artifactId>
     	<version>${selenium.version}</version>
   </dependency>
+<dependency>
+    <groupId>com.github.detro.ghostdriver</groupId>
+    <artifactId>phantomjsdriver</artifactId>
+    <version>1.1.0</version>
+</dependency>
+  
   <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>

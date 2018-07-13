@@ -15,7 +15,7 @@ public class BasicTestWD extends DriverFactory {
 		WebElement searchField=driver.findElement(By.name("q"));
 		searchField.clear();
 		searchField.sendKeys(search);
-		System.out.println("Page titke is: " +driver.getTitle());
+		System.out.println("Page title is: " +driver.getTitle());
 		searchField.submit();
 		(new WebDriverWait(driver,10)).until(new ExpectedCondition<Boolean>() {
 			public Boolean apply(WebDriver driverObject)
